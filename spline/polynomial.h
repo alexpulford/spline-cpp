@@ -19,8 +19,6 @@ private:
 public:
     Polynomial(vector<double> coefficients) : coeff(coefficients) { };
 
-    Polynomial apply(double2 w);
-
     bool empty();
 
     int degree();
