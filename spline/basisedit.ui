@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BasisEdit</class>
+ <widget class="QWidget" name="BasisEdit">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTreeWidget" name="polyView">
+     <column>
+      <property name="text">
+       <string>Basis</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Span</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Function</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>polyView</sender>
+   <signal>itemSelectionChanged()</signal>
+   <receiver>BasisEdit</receiver>
+   <slot>changedSelection()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>281</x>
+     <y>100</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>397</x>
+     <y>128</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <signal>change()</signal>
+  <slot>changed()</slot>
+  <slot>changedSelection()</slot>
+ </slots>
+</ui>
